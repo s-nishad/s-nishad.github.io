@@ -1,0 +1,25 @@
+{
+    "education": [
+      {
+        "institution": "Begum Rokeya University, Rangpur",
+        "degree": "BSc (Engg.) in Computer Science & Engineering",
+        "result": "CGPA: 3.46/4.00",
+        "duration": "2019 — 2024",
+        "description": "Department of Computer Science & Engineering, Faculty of Engineering & Technology. Successfully completed all 160 credit hours, including the final year thesis. Relevant courses include Data Structures, Algorithms, Database Management Systems, Neumerical Methods, Operating Systems, Computer Networks, Software Engineering, VLSI, Computer Graphics, Digital Image Processing and Artificial Intelligence."
+      },
+      {
+        "institution": "Joypurhat Govt. College, Joypurhat",
+        "degree": "Higher Secondary School Certificate (HSC)",
+        "duration": "2018",
+        "result": "GPA: 3.25/5.00",
+        "description": "Science Group"
+      },
+      {
+        "institution": "Tilabadul Abdul Mazid High School, Joypurhat",
+        "degree": "Secondary School Certificate (SSC)",
+        "duration": "2016",
+        "result": "GPA: 5.00/5.00",
+        "description": "Science Group"
+      }
+    ]
+  }

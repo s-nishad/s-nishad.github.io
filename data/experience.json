@@ -1,0 +1,26 @@
+{
+    "experiences": [
+      {
+        "company": "Singularity Limited",
+        "jobs": [
+          {
+            "title": "Junior Software Engineer",
+            "duration": "April, 2025 — Present",
+            "location": "Dhaka, Bangladesh",
+            "description": "Working with Python (Django, FastAPI), and SQLAlchemy to build scalable web apps."
+          }
+        ]
+      },
+      {
+        "company": "Marvelous Technologies",
+        "jobs": [
+          {
+            "title": "Software Engineer Intern",
+            "duration": "Oct, 2023 — Sept, 2024",
+            "location": "Dhaka, Bangladesh",
+            "description": "I Engineered and deployed Python based web applications using Django, Redis for caching, and Celery for task queue management. I enhanced database efficiency by optimizing schemas, which sped up data storage and retrieval while reducing server load. I also played a key role in accelerating microservices development and deployment by leveraging gRPC, SQLAlchemy, FastAPI, and Docker, resulting in a 30% faster time-to-market for new features. Additionally, I explored methods to visualize and send daily reports of test results to team members, improving communication and decision making processes."
+          }
+        ]
+      }
+    ]
+  }

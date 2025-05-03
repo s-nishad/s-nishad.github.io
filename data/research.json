@@ -1,0 +1,28 @@
+{
+    "research": [
+        {
+            "title": "BRUIIoT: A Dataset of Custom IIoT for Network Anomaly Detection with an Enhanced Feature Engineering",
+            "icon": "book-outline",
+            "duration": "Jan 2023 - Jan 2024",
+            "location": "Begum Rokeya University, Rangpur",
+            "description": "This paper represents an enhanced methodology for network anomaly detection in Industrial IoT (IIoT) systems with the use of advanced data aggregation and mutual information-based feature selection. Our main focus is on the problem of transforming raw network traffic data into meaningful, aggregated forms which capture crucial temporal and statistical patterns. A refined set of 150 features, including unique Internet Protocol (IP) counts, Transmission Control Protocol (TCP) acknowledgment patterns, and Internet Control Message Protocol (ICMP) sequence ratios was identified using mutual information to improve anomaly detection accuracy. We validate this approach by developing our BRUIIoT data set, which consists of a resource generated on a test bed comprising over 61 million network packets condensed into 3 million records. In contrast to most existing datasets with poor diversity of realistic attacks or losing key features, the dataset conserves delicate attack behaviors and could lead to improved training and evaluation. This guarantees that the dataset is aligned with the conditions of real-world IIoT. Through the data aggregation process we kept the nuanced attack behaviors which the traditional approaches missed. Specifically, SHAP (SHapley Additive exPlanations) explainable AI techniques in our research demonstrated that important aggregated features played a considerable role in the predictions the model made. Machine learning classifiers, including SVM, GBoost, XGBoost, CatBoost, KNN, AdaBoost, Random Forest, Extra Trees and a custom DNN models are trained on the aggregated data achieved outstanding performance: This achieves accuracy of 98.7%, precision and recall of 97.5%, F1 score of 96.8%. These result were validated using K-fold cross-validation to verify their robustness and reliability. The outcome of this research presents an enabling framework for scaling IIoT cyberattacks detection via application of advanced aggregation and feature engineering towards the development of interpretable, scalable, and effective cybersecurity solutions. The findings deal with the urgent need for robust anomaly detection techniques for modern IIoT environments.",
+            "tags": [
+                "IIoT Security",
+                "Machine Learning",
+                "Network Analysis",
+                "Artificial Intelligence",
+                "IoT",
+                "Security",
+                "Sensors"
+            ],
+            "dataset_doi": {
+                "text": "dx.doi.org/10.21227/fqqe-g413",
+                "url": "https://dx.doi.org/10.21227/fqqe-g413"
+            },
+            "journal_doi": {
+                "text": "Pending",
+                "url": "https://csebrur.com/publications/bruriiot"
+            }
+        }
+    ]
+}

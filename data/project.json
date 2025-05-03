@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+    "title": "Order System",
+    "category": "web",
+    "image": "./assets/images/order-project.png",
+    "detailsUrl": "projects/order-system.html",
+    "description": "A web based ERP for managing orders efficiently"
+    },
+
+    {
+    "title": "Online Auction",
+    "category": "web",
+    "image": "./assets/images/auction-project.jpg",
+    "detailsUrl": "projects/online-auction.html",
+    "description": "Online auction platform"
+    },
+
+    {
+    "title": "Squirrel Football Academy",
+    "category": "web",
+    "image": "./assets/images/squ-project.png",
+    "detailsUrl": "projects/squrrel.html",
+    "description": "Event management platform for Squirrel Football Academy "
+    },
+
+    {
+    "title": "Smart Marriage System",
+    "category": "desktop",
+    "image": "./assets/images/marriage-project.jpg",
+    "detailsUrl": "projects/marriage.html",
+    "description": "A desktop application for managing marriage data and events"
+    },
+
+    {
+    "title": "Moving Bicycle in C++",
+    "category": "others",
+    "image": "./assets/images/cycle-project.jpg",
+    "detailsUrl": "projects/cycle.html",
+    "description": "A C++ program that simulates a moving bicycle"
+    }
+  ],
+  "categories": ["All", "web", "desktop", "mobile", "others"]
+}

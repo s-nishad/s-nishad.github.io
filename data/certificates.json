@@ -1,0 +1,39 @@
+{
+    "certificates": [
+      {
+        "title": "Linux Operating System: A complete Linux guide for Beginners",
+        "issuer": "Udemy",
+        "date": "Completed",
+        "image": "./assets/images/cert-linux.jpg",
+        "url": "https://www.udemy.com/certificate/UC-22ad02f4-2468-4caa-9423-f057af360ee1/"
+      },
+      {
+        "title": "Master Git and Github - Beginner to Expert",
+        "issuer": "Udemy",
+        "date": "Completed",
+        "image": "./assets/images/cert-github.jpg",
+        "url": "https://www.udemy.com/certificate/UC-72b3d579-74bc-44d9-8c9b-05530225e071/"
+      },
+      {
+        "title": "Foundations of Cybersecurity",
+        "issuer": "Coursera",
+        "date": "Completed",
+        "image": "./assets/images/cert-cybersecurity.jpg",
+        "url": "https://www.coursera.org/account/accomplishments/certificate/B3AXUW6P988L"
+      },
+      {
+        "title": "Supervised Machine Learning: Regression and Classification",
+        "issuer": "Coursera",
+        "date": "Completed",
+        "image": "./assets/images/cert-ml.jpg",
+        "url": "https://www.coursera.org/account/accomplishments/certificate/WCS6G7NAFENJ"
+      },
+      {
+        "title": "Problem Solving with Algorithms and Data Structures using C++",
+        "issuer": "LeetCode",
+        "date": "Completed",
+        "image": "./assets/images/cert-leetcode50.png",
+        "url": "leetcode.com/certificate/LeetCode-50-Problem-Solving-Certificate-2023-08-31"
+      }
+    ]
+  }

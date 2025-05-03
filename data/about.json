@@ -1,0 +1,33 @@
+{
+    "about": {
+      "intro": "Meet Md Shohanur Islam, A Passionate Problem Solver & Tech Enthusiast.",
+      "description": [
+        "I am currently working as a Junior Software Engineer at Singularity Limited, where I get the opportunity to work on various challenging projects and contribute to innovative solutions.",
+        "I completed my graduation from Begum Rokeya University, Rangpur. I’ve worked on various projects and participated in programming contests, both at my university and on online platforms like LeetCode and Codeforces. I’ve always been passionate about tech and problem-solving, which is why I love software engineering. Whether it’s building something new or solving tricky problems, I enjoy the process of learning and finding creative solutions.",
+        "I am eager to learn and share my knowledge, constantly striving to grow both personally and professionally."
+        
+      ],
+      "services": [
+        {
+          "title": "Backend development",
+          "icon": "./assets/images/icon-dev.svg",
+          "description": "Building server side logic, APIs, databases, and application infrastructure."
+        },
+        {
+          "title": "Software Architecture",
+          "icon": "./assets/images/icon-design.svg",
+          "description": "Designing and structuring software systems for scalability and maintainability."
+        },
+        {
+          "title": "Mobile apps",
+          "icon": "./assets/images/icon-app.svg",
+          "description": "Building mobile apps for Android and iOS."
+        },
+        {
+          "title": "Deployment and Maintenance",
+          "icon": "./assets/images/deploy.svg",
+          "description": "Deploying applications to production and ensuring their smooth operation."
+        }
+      ]
+    }
+  }

@@ -1,0 +1,12 @@
+{
+    "posts": [
+      {
+        "title": "AI Search Algorithms: From the Basics to Real-World Applications",
+        "category": "AI",
+        "date": "2023-11-29",
+        "image": "./assets/images/blog1.webp",
+        "excerpt": "Search algorithms are a fundamental concept in computer science and artificial intelligence.",
+        "url": "https://medium.com/@s-nishad/ai-search-algorithms-from-the-basics-to-real-world-applications-c71fda6231e6"
+      }
+    ]
+  }
