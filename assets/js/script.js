@@ -184,4 +184,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 Fancybox.bind("[data-fancybox]", {
   //
+  preloader: false,
+  // Custom preloader function
+  on: {
+    init: (fancybox) => {
+      const preloader = document.querySelector(".fancybox__preloader");
+      if (preloader) {
+        preloader.style.display = "none"; // Hide the preloader
+      }
+    },
+  },
 }) 

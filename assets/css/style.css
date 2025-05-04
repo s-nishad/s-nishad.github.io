@@ -2429,3 +2429,7 @@ textarea.form-input::-webkit-resizer {
   background: transparent !important;
   border: 1px solid var(--jet) !important;
 }
+
+.project-item-icon-box ion-icon {
+  pointer-events: none;
+}
