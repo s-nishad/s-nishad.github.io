@@ -19,9 +19,9 @@
           "description": "Designing and structuring software systems for scalability and maintainability."
         },
         {
-          "title": "Mobile apps",
-          "icon": "./assets/images/icon-app.svg",
-          "description": "Building mobile apps for Android and iOS."
+          "title": "Artificial Intelligence",
+          "icon": "./assets/images/icon-ai.svg",
+          "description": "Implementing AI solutions to enhance applications with intelligent features."
         },
         {
           "title": "Deployment and Maintenance",
