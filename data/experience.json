@@ -7,7 +7,7 @@
             "title": "Junior Software Engineer",
             "duration": "April, 2025 — Present",
             "location": "Dhaka, Bangladesh",
-            "description": "Working with Python (Django, FastAPI), and SQLAlchemy to build scalable web apps."
+            "description": "Designing and developing scalable backend systems using Django REST Framework and FastAPI in a microservices architecture. Integrated OpenAI APIs to deliver AI-powered features, implemented JWT and cookie-based authentication with social login support, and optimized PostgreSQL data models using SQLAlchemy. Collaborating in Agile sprints with cross-functional teams to deliver high-quality production-ready features."
           }
         ]
       },

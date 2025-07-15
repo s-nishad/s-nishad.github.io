@@ -7,6 +7,14 @@
         "image": "./assets/images/blog1.webp",
         "excerpt": "Search algorithms are a fundamental concept in computer science and artificial intelligence.",
         "url": "https://medium.com/@s-nishad/ai-search-algorithms-from-the-basics-to-real-world-applications-c71fda6231e6"
+      },
+      {
+        "title": "DevHacks: Tips and Tricks for Efficient Development",
+        "category": "Development",
+        "date": "2025-04-08",
+        "image": "./assets/images/blog2.png",
+        "excerpt": "A collection of tips and tricks to enhance your development workflow.",
+        "url": "https://s-nishad.github.io/devhacks/hacks/"
       }
     ]
   }

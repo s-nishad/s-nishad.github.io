@@ -51,7 +51,7 @@
             ]
         },
         {
-            "title": "Databases",
+            "title": "Databases & ORMs",
             "skills": [
                 {
                     "name": "MySQL",
@@ -89,6 +89,10 @@
                 {
                     "name": "GitHub",
                     "badgeUrl": "https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                },
+                {
+                    "name": "GitLab",
+                    "badgeUrl": "https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=gitlab&logoColor=white"
                 }
             ]
         },
@@ -110,12 +114,20 @@
                 {
                     "name": "AWS",
                     "badgeUrl": "https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"
+                },
+                {
+                    "name": "Docker Compose",
+                    "badgeUrl": "https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white"
                 }
             ]
         },
         {
             "title": "Others",
             "skills": [
+                {
+                    "name": "AI",
+                    "badgeUrl": "https://img.shields.io/badge/AI-FF6C20?style=for-the-badge&logo=openai&logoColor=white"
+                },
                 {
                     "name": "gRPC",
                     "badgeUrl": "https://img.shields.io/badge/gRPC-3776AB?style=for-the-badge&logo=grpc&logoColor=white"
@@ -129,8 +141,8 @@
                     "badgeUrl": "https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white"
                 },
                 {
-                    "name": "Docker Compose",
-                    "badgeUrl": "https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+                    "name": "OpenAPI",
+                    "badgeUrl": "https://img.shields.io/badge/OpenAPI-85EA2D?style=for-the-badge&logo=openapi&logoColor=black"
                 }
             ]
         }
