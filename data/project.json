@@ -1,11 +1,11 @@
 {
   "projects": [
     {
-      "title": "HR Tech",
+      "title": "AI-Powered Recruitment Platform",
       "category": "web",
       "image": "./assets/images/600_450_hr_tech.png",
       "detailsUrl": "projects/hr_tech.html",
-      "description": "AI-powered recruitment platform to streamline hiring process"
+      "description": "AI powered recruitment platform to streamline hiring process"
     },
     {
       "title": "Order System",
