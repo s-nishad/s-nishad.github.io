@@ -2,6 +2,81 @@
 
 
 
+// Theme (system default + user override)
+const THEME_STORAGE_KEY = "theme";
+const themeToggleBtn = document.querySelector("[data-theme-toggle]");
+const systemThemeQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+function getStoredTheme() {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY);
+  } catch (_) {
+    return null;
+  }
+}
+
+function setStoredTheme(value) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, value);
+  } catch (_) { }
+}
+
+function getSystemTheme() {
+  if (!systemThemeQuery) return "dark";
+  return systemThemeQuery.matches ? "dark" : "light";
+}
+
+function resolveTheme() {
+  const stored = getStoredTheme();
+  if (!stored || stored === "system") return getSystemTheme();
+  return stored;
+}
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+
+  if (themeToggleBtn) {
+    const icon = theme === "dark" ? "moon-outline" : "sunny-outline";
+    const label = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+    const ion = themeToggleBtn.querySelector("ion-icon");
+    if (ion) ion.setAttribute("name", icon);
+    themeToggleBtn.setAttribute("aria-label", label);
+  }
+
+  // Swap brand icons that are light-colored for dark mode (and reverse)
+  document.querySelectorAll(".social-brand-icon[data-icon-dark][data-icon-light]").forEach(img => {
+    const nextSrc = theme === "dark" ? img.dataset.iconDark : img.dataset.iconLight;
+    if (nextSrc && img.getAttribute("src") !== nextSrc) {
+      img.setAttribute("src", nextSrc);
+    }
+  });
+}
+
+applyTheme(resolveTheme());
+
+if (systemThemeQuery) {
+  const onSystemThemeChange = () => {
+    const stored = getStoredTheme();
+    if (!stored || stored === "system") applyTheme(resolveTheme());
+  };
+  if (typeof systemThemeQuery.addEventListener === "function") {
+    systemThemeQuery.addEventListener("change", onSystemThemeChange);
+  } else if (typeof systemThemeQuery.addListener === "function") {
+    systemThemeQuery.addListener(onSystemThemeChange);
+  }
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", () => {
+    const current = resolveTheme();
+    const next = current === "dark" ? "light" : "dark";
+    setStoredTheme(next);
+    applyTheme(next);
+  });
+}
+
+
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -80,32 +155,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-
-
-
-// // page navigation variables
-// const navigationLinks = document.querySelectorAll("[data-nav-link]");
-// const pages = document.querySelectorAll("[data-page]");
-
-// // add event to all nav link
-// for (let i = 0; i < navigationLinks.length; i++) {
-//   navigationLinks[i].addEventListener("click", function () {
-
-//     for (let i = 0; i < pages.length; i++) {
-//       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-//         pages[i].classList.add("active");
-//         navigationLinks[i].classList.add("active");
-//         window.scrollTo(0, 0);
-//       } else {
-//         pages[i].classList.remove("active");
-//         navigationLinks[i].classList.remove("active");
-//       }
-//     }
-
-//   });
-// }
-
-
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -120,7 +169,7 @@ navigationLinks.forEach(link => {
     });
 
     navigationLinks.forEach(nav => {
-      nav.classList.toggle("active", nav === this);
+      nav.classList.toggle("active", nav.getAttribute("data-target") === targetPage);
     });
 
     window.scrollTo(0, 0);
@@ -140,9 +189,6 @@ function updateNavLabels() {
 
 window.addEventListener("resize", updateNavLabels);
 window.addEventListener("load", updateNavLabels);
-
-
-
 
 
 
@@ -194,4 +240,4 @@ Fancybox.bind("[data-fancybox]", {
       }
     },
   },
-}) 
+})

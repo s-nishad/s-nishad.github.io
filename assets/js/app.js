@@ -1,6 +1,14 @@
+function showLoadError(element, message) {
+  if (!element) return;
+  element.innerHTML = `<p class="empty-state">${message}</p>`;
+}
+
 function loadAboutSection() {
   fetch('data/about.json')
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to load about');
+      return response.json();
+    })
     .then(data => {
       // Load about text
       const aboutSection = document.querySelector('[data-page="about"] .about-text');
@@ -14,7 +22,7 @@ function loadAboutSection() {
       servicesSection.innerHTML = data.about.services.map(service => `
           <li class="service-item">
             <div class="service-icon-box">
-              <img src="${service.icon}" alt="${service.title.toLowerCase()} icon" width="40">
+              <img src="${service.icon}" alt="${service.title.toLowerCase()} icon" width="40" loading="lazy">
             </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">${service.title}</h4>
@@ -23,7 +31,10 @@ function loadAboutSection() {
           </li>
         `).join('');
     })
-    .catch(error => console.error('Error loading about data:', error));
+    .catch(error => {
+      console.error('Error loading about data:', error);
+      showLoadError(document.querySelector('[data-page="about"] .about-text'), 'Unable to load about content right now.');
+    });
 }
 
 function loadExperience() {
@@ -70,7 +81,10 @@ function loadExperience() {
 
       timelineSection.innerHTML = html;
     })
-    .catch(error => console.error("Error loading experience data:", error));
+    .catch(error => {
+      console.error("Error loading experience data:", error);
+      showLoadError(document.querySelector('.timeline'), 'Unable to load experience right now.');
+    });
 }
 
 
@@ -100,7 +114,10 @@ function loadEducation() {
 
       eduTimeline.innerHTML = html;
     })
-    .catch(error => console.error("Error loading education data:", error));
+    .catch(error => {
+      console.error("Error loading education data:", error);
+      showLoadError(document.querySelector('.edu-timeline-list'), 'Unable to load education right now.');
+    });
 }
 
 function loadCertificate() {
@@ -115,7 +132,7 @@ function loadCertificate() {
         html += `
           <div class="slide">
             <a class="venobox" data-gall="certificates" href="${cert.image}" data-title="${cert.title}">
-              <img src="${cert.image}" alt="${cert.title}">
+              <img src="${cert.image}" alt="${cert.title}" loading="lazy">
             </a>
           </div>
         `;
@@ -162,7 +179,10 @@ function loadCertificate() {
         });
       }
     })
-    .catch(error => console.error("Error loading certificate data:", error));
+    .catch(error => {
+      console.error("Error loading certificate data:", error);
+      showLoadError(document.querySelector('.slider'), 'Unable to load certificates right now.');
+    });
 }
 
 
@@ -181,7 +201,7 @@ function loadSkills() {
 
         category.skills.forEach(skill => {
           html += `
-              <img src="${skill.badgeUrl}" alt="${skill.name}">
+              <img src="${skill.badgeUrl}" alt="${skill.name}" loading="lazy">
             `;
         });
 
@@ -190,7 +210,10 @@ function loadSkills() {
 
       techBadgesSection.innerHTML = html;
     })
-    .catch(error => console.error("Error loading skills data:", error));
+    .catch(error => {
+      console.error("Error loading skills data:", error);
+      showLoadError(document.querySelector('.tech-badges'), 'Unable to load skills right now.');
+    });
 }
 
 function setupFiltering() {
@@ -260,7 +283,10 @@ function loadProjects() {
       projectList.innerHTML = html;
       setupFiltering(); // Call the filtering setup function after loading projects
     })
-    .catch(error => console.error("Error loading projects data:", error));
+    .catch(error => {
+      console.error("Error loading projects data:", error);
+      showLoadError(document.querySelector('.project-list'), 'Unable to load projects right now.');
+    });
 }
 
 
@@ -304,7 +330,10 @@ function loadBlogPosts() {
         blogList.appendChild(postItem);
       });
     })
-    .catch(error => console.error('Error loading blog posts:', error));
+    .catch(error => {
+      console.error('Error loading blog posts:', error);
+      showLoadError(document.querySelector('.blog-posts-list'), 'Unable to load blog posts right now.');
+    });
 }
 
 function loadResearch() {
@@ -362,7 +391,10 @@ function loadResearch() {
         ionicons.refresh();
       }
     })
-    .catch(error => console.error('Error loading research data:', error));
+    .catch(error => {
+      console.error('Error loading research data:', error);
+      showLoadError(document.querySelector('.research .timeline'), 'Unable to load research right now.');
+    });
 }
 
 

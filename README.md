@@ -12,10 +12,6 @@ Check out the live version of my portfolio site [https://s-nishad.github.io](htt
 - Easy navigation
 - Showcase of projects and skills
 
-## Credits
- 
-This portfolio template is based on the [vCard Personal Portfolio](https://github.com/codewithsadee/vcard-personal-portfolio) by [CodeWithSadee](https://github.com/codewithsadee).
-
 ## License
 
 This project is for personal use and learning purposes.
