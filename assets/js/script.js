@@ -2,10 +2,9 @@
 
 
 
-// Theme (system default + user override)
+// Theme (dark by default + user override)
 const THEME_STORAGE_KEY = "theme";
 const themeToggleBtn = document.querySelector("[data-theme-toggle]");
-const systemThemeQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
 function getStoredTheme() {
   try {
@@ -21,14 +20,9 @@ function setStoredTheme(value) {
   } catch (_) { }
 }
 
-function getSystemTheme() {
-  if (!systemThemeQuery) return "dark";
-  return systemThemeQuery.matches ? "dark" : "light";
-}
-
 function resolveTheme() {
   const stored = getStoredTheme();
-  if (!stored || stored === "system") return getSystemTheme();
+  if (!stored || stored === "system") return "dark";
   return stored;
 }
 
@@ -53,18 +47,6 @@ function applyTheme(theme) {
 }
 
 applyTheme(resolveTheme());
-
-if (systemThemeQuery) {
-  const onSystemThemeChange = () => {
-    const stored = getStoredTheme();
-    if (!stored || stored === "system") applyTheme(resolveTheme());
-  };
-  if (typeof systemThemeQuery.addEventListener === "function") {
-    systemThemeQuery.addEventListener("change", onSystemThemeChange);
-  } else if (typeof systemThemeQuery.addListener === "function") {
-    systemThemeQuery.addListener(onSystemThemeChange);
-  }
-}
 
 if (themeToggleBtn) {
   themeToggleBtn.addEventListener("click", () => {
