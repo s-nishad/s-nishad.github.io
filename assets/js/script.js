@@ -161,7 +161,7 @@ navigationLinks.forEach(link => {
 
 
 function updateNavLabels() {
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 767;
   navigationLinks.forEach(link => {
     const full = link.getAttribute("data-target");
     const short = link.getAttribute("data-label") || full;
@@ -169,6 +169,7 @@ function updateNavLabels() {
   });
 }
 
+updateNavLabels();
 window.addEventListener("resize", updateNavLabels);
 window.addEventListener("load", updateNavLabels);
 

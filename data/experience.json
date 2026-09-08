@@ -1,26 +1,43 @@
 {
-    "experiences": [
-      {
-        "company": "Singularity Limited",
-        "jobs": [
-          {
-            "title": "Junior Software Engineer",
-            "duration": "April, 2025 — Present",
-            "location": "Dhaka, Bangladesh",
-            "description": "Designing and developing scalable backend systems using Django REST Framework and FastAPI in a microservices architecture. Integrated OpenAI APIs to deliver AI-powered features, implemented JWT and cookie-based authentication with social login support, and optimized PostgreSQL data models using SQLAlchemy. Collaborating in Agile sprints with cross-functional teams to deliver high-quality production-ready features."
-          }
-        ]
-      },
-      {
-        "company": "Marvelous Technologies",
-        "jobs": [
-          {
-            "title": "Software Engineer Intern",
-            "duration": "Oct, 2023 — Sept, 2024",
-            "location": "Dhaka, Bangladesh",
-            "description": "I Engineered and deployed Python based web applications using Django, Redis for caching, and Celery for task queue management. I enhanced database efficiency by optimizing schemas, which sped up data storage and retrieval while reducing server load. I also played a key role in accelerating microservices development and deployment by leveraging gRPC, SQLAlchemy, FastAPI, and Docker, resulting in a 30% faster time-to-market for new features. Additionally, I explored methods to visualize and send daily reports of test results to team members, improving communication and decision making processes."
-          }
-        ]
-      }
-    ]
-  }
+  "experiences": [
+    {
+      "company": "DevSecOps Consulting LLC",
+      "jobs": [
+        {
+          "title": "Software Engineer",
+          "duration": "February, 2026 — Present",
+          "location": "Remote, Bangladesh",
+          "description": "Supporting the design, development, deployment, and maintenance of backend systems, APIs, cloud infrastructure, and secure architectures for a SaaS-based analytics technology platform. Working with Python for backend development, API development and system integrations, cloud infrastructure, secure coding and DevSecOps practices, performance optimization, scalability, and technical documentation."
+        }
+      ]
+    },
+    {
+      "company": "Singularity Limited",
+      "jobs": [
+        {
+          "title": "Junior Software Engineer",
+          "duration": "April, 2025 — December, 2025",
+          "location": "Dhaka, Bangladesh",
+          "description": "Designing and developing scalable backend systems using Django REST Framework and FastAPI in a microservices architecture. Integrated OpenAI APIs to deliver AI-powered features, implemented JWT and cookie-based authentication with social login support, and optimized PostgreSQL data models using SQLAlchemy. Collaborating in Agile sprints with cross-functional teams to deliver high-quality production-ready features."
+        }
+      ]
+    },
+    {
+      "company": "Marvelous Technologies",
+      "jobs": [
+        {
+          "title": "Junior Software Engineer",
+          "duration": "Apr, 2024 — Sept, 2024",
+          "location": "Dhaka, Bangladesh",
+          "description": "Promoted to Junior Software Engineer after internship. Led feature development and deployment cycles for scalable Python backend microservices. Implemented advanced optimizations, improved CI/CD pipelines, and fostered cross-team collaboration for faster releases. Maintained and enhanced core system integrations and played a key role in ensuring code quality, security, and performance."
+        },
+        {
+          "title": "Software Engineer Intern",
+          "duration": "Oct, 2023 — Mar, 2024",
+          "location": "Dhaka, Bangladesh",
+          "description": "Engineered and deployed Python-based web applications using Django, Redis for caching, and Celery for task queue management. Enhanced database efficiency by optimizing schemas, leading to faster data storage and retrieval and reduced server load. Contributed to microservices development and deployment using gRPC, SQLAlchemy, FastAPI, and Docker. Explored methods to visualize and send daily reports of test results to team members, improving communication and decision-making processes."
+        }
+      ]
+    }
+  ]
+}

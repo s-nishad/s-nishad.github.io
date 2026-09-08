@@ -142,31 +142,55 @@ function loadCertificate() {
 
       const slides = document.querySelectorAll('.slide');
       let index = 0;
-      const slidesPerPage = window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 4;
-      const totalPages = Math.ceil(slides.length / slidesPerPage);
 
-      // Create dots
-      dotsContainer.innerHTML = ''; // Clear existing dots
-      for (let i = 0; i < totalPages; i++) {
-        const dot = document.createElement('span');
-        dot.addEventListener('click', () => moveToSlide(i));
-        dotsContainer.appendChild(dot);
+      function getSlidesPerPage() {
+        if (window.innerWidth <= 480) return 1;
+        if (window.innerWidth <= 768) return 2;
+        return 4;
       }
-      const dots = dotsContainer.querySelectorAll('span');
-      if (dots.length > 0) dots[0].classList.add('active');
+
+      function getPageStep() {
+        return 100 / getSlidesPerPage();
+      }
+
+      function buildDots() {
+        const totalPages = Math.ceil(slides.length / getSlidesPerPage());
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement('span');
+          dot.addEventListener('click', () => moveToSlide(i));
+          dotsContainer.appendChild(dot);
+        }
+        const dots = dotsContainer.querySelectorAll('span');
+        if (dots[index]) dots[index].classList.add('active');
+        else if (dots[0]) {
+          index = 0;
+          dots[0].classList.add('active');
+        }
+        return totalPages;
+      }
+
+      let totalPages = buildDots();
 
       function moveToSlide(i) {
-        index = i;
-        certSlider.style.transform = `translateX(-${i * 50}%)`;
+        totalPages = Math.ceil(slides.length / getSlidesPerPage());
+        index = ((i % totalPages) + totalPages) % totalPages;
+        certSlider.style.transform = `translateX(-${index * getPageStep()}%)`;
 
+        const dots = dotsContainer.querySelectorAll('span');
         dots.forEach(dot => dot.classList.remove('active'));
-        dots[i].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
       }
+
+      window.addEventListener('resize', () => {
+        totalPages = buildDots();
+        moveToSlide(Math.min(index, totalPages - 1));
+      });
 
       // Optional: Auto-slide every 5s
       setInterval(() => {
-        index = (index + 1) % totalPages;
-        moveToSlide(index);
+        totalPages = Math.ceil(slides.length / getSlidesPerPage());
+        moveToSlide(index + 1);
       }, 5000);
 
       if (typeof VenoBox !== 'undefined') {
@@ -195,17 +219,18 @@ function loadSkills() {
 
       data.skillCategories.forEach(category => {
         html += `
-            <h3 class="h3 skills-title">${category.title}</h3>
-            <div class="badge-container">
+            <div class="skill-category">
+              <h3 class="h3 skills-title">${category.title}</h3>
+              <div class="badge-container">
           `;
 
         category.skills.forEach(skill => {
           html += `
-              <img src="${skill.badgeUrl}" alt="${skill.name}" loading="lazy">
+              <img src="${skill.badgeUrl}" alt="${skill.name}" loading="lazy" title="${skill.name}">
             `;
         });
 
-        html += `</div>`;
+        html += `</div></div>`;
       });
 
       techBadgesSection.innerHTML = html;
